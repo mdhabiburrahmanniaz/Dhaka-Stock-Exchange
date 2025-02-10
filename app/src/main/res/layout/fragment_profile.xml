@@ -35,28 +35,49 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                app:cardCornerRadius="50dp"
+            <RelativeLayout
+                android:layout_width="101dp"
+                android:layout_height="101dp"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                app:strokeColor="@color/secound_color"
-                app:strokeWidth="1dp"
-                android:layout_marginBottom="2dp"
-
+                android:gravity="center"
                 >
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_circle"
+                    android:backgroundTint="@color/blue"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="1.5dp"
+                    app:cardCornerRadius="50dp">
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="1.5dp"
+                        android:clipToOutline="true"
+                        android:contentDescription="Logo"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/developer" />
+
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_profile"
-                    android:layout_gravity="center"
-                    android:padding="9dp"
-                    />
-
-
-            </com.google.android.material.card.MaterialCardView>
-
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/profile_circle"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/image_edit" />
+            </RelativeLayout>
             <!-- Guest Login -->
             <TextView
                 android:id="@+id/tvGuestLogin"
