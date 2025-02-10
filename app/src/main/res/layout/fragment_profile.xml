@@ -1,0 +1,176 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secound_color"
+            android:theme="@style/My_Toolbar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/jost"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/secound_color"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="2dp"
+
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_profile"
+                    android:layout_gravity="center"
+                    android:padding="9dp"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Guest Login -->
+            <TextView
+                android:id="@+id/tvGuestLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"
+                android:text="Guest Login"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+            <!-- Account Settings -->
+            <TextView
+                android:id="@+id/tvAccountSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Account Settings"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Account Settings List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Edit Profile -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableStart="@drawable/ic_profile"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/black"
+                    android:padding="16dp"
+                    android:text="Edit profile"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+
+                <!-- Saved Addresses -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableStart="@drawable/ic_addresses"
+                    android:drawablePadding="8dp"
+                    android:padding="16dp"
+                    android:text="Saved Addresses"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <!-- Select Language -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableStart="@drawable/ic_language"
+                    android:drawablePadding="8dp"
+                    android:padding="16dp"
+                    android:text="Select Language"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Notifications Settings -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableStart="@drawable/ic_notifications"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Notifications Settings"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- My Activity -->
+            <TextView
+                android:id="@+id/tvMyActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="My Activity"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Reviews and Q&A -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- Questions & Answers -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableStart="@drawable/ic_questions_answers"
+                    android:drawablePadding="8dp"
+                    android:padding="16dp"
+                    android:text="Questions and Answers"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

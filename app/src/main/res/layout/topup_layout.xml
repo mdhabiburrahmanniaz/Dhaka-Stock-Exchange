@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:backgroundTint="@color/white"
+    android:elevation="5dp"
+    app:cardCornerRadius="5dp"
+    app:strokeWidth="0.5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jost"
+                android:padding="10dp"
+                android:text="Company Name"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Name Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutMobile"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Name"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/white"
+                android:hint="কত টাকার বেশী হলে নোটিস পেতে চান ?"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="0.7dp"
+                app:endIconMode="clear_text"
+                app:helperTextTextColor="@color/black"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/ic_alarm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/jost"
+                    android:inputType="numberDecimal"
+                    android:maxLength="11"
+                    android:padding="10dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="14dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputLayoutMobile"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/dark_blue_2"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jost"
+                    android:gravity="center"
+                    android:paddingHorizontal="50dp"
+                    android:paddingVertical="10dp"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimation"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:background="@drawable/loading_bg"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading" />
+    </RelativeLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

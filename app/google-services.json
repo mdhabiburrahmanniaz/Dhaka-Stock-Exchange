@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "663018128891",
+    "project_id": "dhaka-stock-exchange-5b5f4",
+    "storage_bucket": "dhaka-stock-exchange-5b5f4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663018128891:android:c7e92ba7837ca9f969f75e",
+        "android_client_info": {
+          "package_name": "com.appszonepro.dhakastockexchange"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJoVe25mSw3FKgw35q5vWrgq3fHZM5wEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
