@@ -5,9 +5,11 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -42,30 +44,18 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }
     }
 
+
+
     @Override
     public void onNewToken(@NonNull String token) {
-        super.onNewToken(token);
-        sendTokenToServer(token);
+        // এই মেথড আর দরকার নেই, এটাকে সরিয়ে ফেলুন
     }
 
-    private void sendTokenToServer(String token) {
-        String url = "http://appszonepro.com/apps/DhakaStockExchange/Firebase/update_token.php";
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-                response -> System.out.println("টোকেন সফলভাবে আপডেট হয়েছে: " + response),
-                error -> System.out.println("টোকেন আপডেটে সমস্যা: " + error.getMessage())) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("token", token);
-                params.put("user_id", "1");
-                return params;
-            }
-        };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-    }
+
+
+
 
     private void sendNotification(String title, String body) {
         Intent intent = new Intent(this, MainActivity.class);
